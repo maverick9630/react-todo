@@ -7,11 +7,23 @@ import ShowTask from './components/ShowTask'
 const App = () => {
 
   const [tasklist, setTasklist] = useState([])
+  const [task, setTask] = useState({})
+
   return (
     <div>
       <Header />
-      <AddTask tasklist = {tasklist} setTasklist = {setTasklist} />
-      <ShowTask tasklist = {tasklist} setTasklist = {setTasklist} />
+      <AddTask 
+      tasklist = {tasklist} 
+      setTasklist = {setTasklist} 
+      task = {task}
+      setTask = {setTask}
+      />
+      <ShowTask 
+      tasklist = {tasklist} 
+      setTasklist = {setTasklist} 
+      task = {task}
+      setTask = {setTask}
+      />
     </div>
   )
 }
